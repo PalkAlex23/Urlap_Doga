@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilus.css">
+    <title>Űrlap Dolgozat - Sz-M. A.</title>
+</head>
+<body>
+    <main>
+        <form action="#">
+                <fieldset>
+                <legend>Dolgozat</legend>
+                <div class="elem">
+                    <label for="felnev">felhasználónév </label><input type="text" name="felnev" id="felnev" placeholder="betűvel kezdődik és végződik, közte 3-6 szám" pattern="^[A-z]+\d{3,6}[A-z]$" required>
+                </div>
+                <div class="elem">
+                    <label for="jelszo">jelszó </label><input type="password" name="jelszo" id="jelszo" placeholder="min. 7 karakter, speciális karakterrel végződik" pattern=".{7,}([$@#€&+*=!%])" required>
+                </div>
+                <div class="elem">
+                    <label for="email">e-mail cím </label><input type="email" name="email" id="email" placeholder="vmi@vmi.com" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Adatok</legend>
+                <fieldset class="egyedi">
+                    <legend class="egyedi2">Kedvencek</legend>
+                    <div class="elem2">
+                        <input type="checkbox" name="film" id="film"><label for="film">film</label>
+                    </div>
+                    <div class="elem2">
+                        <input type="radio" name="gomb" id="csoport"><label for="csoport">csoport munka</label>
+                    </div>
+                    <div class="elem2">
+                        <input type="checkbox" name="games" id="games"><label for="games">video-játékok</label>
+                    </div>
+                    <div class="elem2">
+                        <input type="radio" name="gomb" id="egyeni"><label for="egyeni">egyéni munka</label>
+                    </div>
+                    <div class="elem2">
+                        <input type="checkbox" name="olvas" id="olvas"><label for="olvas">olvasás</label>
+                    </div>
+                    <div class="elem2">
+                        <input type="radio" name="gomb" id="barmely"><label for="barmely">bármelyik</label>
+                    </div>
+                    <div class="elem2">
+                        <input type="checkbox" name="seta" id="seta"><label for="seta">séta</label>
+                    </div>
+                </fieldset>
+            </fieldset>
+            <button type="submit">Küldés</button>
+        </form>
+    </main>
+</body>
+</html>
